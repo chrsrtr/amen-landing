@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    /* Modern 3D Text Stack Effect */
+    .text-3d-modern {
+        position: relative;
+        transition: all 0.5s ease;
+        text-shadow:
+            0 1px 0 #cccccc,
+            0 2px 0 #c5c5c5,
+            0 3px 0 #bbb,
+            0 4px 0 #b9b9b9,
+            0 5px 0 #aaa,
+            0 6px 1px rgba(0, 0, 0, .1),
+            0 0 5px rgba(0, 0, 0, .1),
+            0 1px 3px rgba(0, 0, 0, .3),
+            0 3px 5px rgba(0, 0, 0, .2),
+            0 5px 10px rgba(0, 0, 0, .25),
+            0 10px 10px rgba(0, 0, 0, .2),
+            0 20px 20px rgba(0, 0, 0, .15);
+    }
+
+    .text-3d-future {
+        position: relative;
+        color: #06b6d4;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transform-style: preserve-3d;
+        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    /* Layered Depth Effect for FUTURE */
+    .text-3d-future::before,
+    .text-3d-future::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.6s ease;
+        pointer-events: none;
+    }
+
+    .text-3d-future::before {
+        transform: translateZ(-20px) scale(0.95);
+        color: rgba(6, 182, 212, 0.2);
+        filter: blur(2px);
+    }
+
+    .text-3d-future::after {
+        transform: translateZ(-10px) scale(0.98);
+        color: rgba(6, 182, 212, 0.4);
+    }
+
+    .group:hover .text-3d-future {
+        transform: translateZ(10px);
+    }
+
+    .group:hover .text-3d-future::before {
+        transform: translateZ(-40px);
+        opacity: 0.5;
+    }
+
+    .group:hover .text-3d-future::after {
+        transform: translateZ(-20px);
+        opacity: 0.8;
+    }
+}
