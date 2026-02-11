@@ -2,7 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
 @layer utilities {
+  .font-sf-pro {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .text-apple-gradient {
+    background: linear-gradient(
+      135deg,
+      #007AFF 0%,    /* Blue */
+      #5E5CE6 25%,   /* Deep Purple */
+      #BF5AF2 50%,   /* Magenta/Pink */
+      #FF3B30 75%,   /* Red/Pink */
+      #FF9500 100%   /* Orange */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
 
     /* Modern 3D Text Stack Effect */
     .text-3d-modern {

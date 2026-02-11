@@ -40,7 +40,7 @@ const ParticleWave = ({ theme }: { theme?: 'classic' | '2084' }) => {
     <Points positions={points} stride={3} ref={ref}>
       <PointMaterial
         transparent
-        color={theme === '2084' ? "#06b6d4" : "#C5A059"}
+        color={theme === '2084' ? "#06b6d4" : "#5E5CE6"}
         size={0.03}
         sizeAttenuation={true}
         depthWrite={false}
@@ -85,7 +85,7 @@ export const HeroScene: React.FC<{ theme?: 'classic' | '2084' }> = ({ theme }) =
       <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
         <AmbientLight intensity={theme === '2084' ? 0.2 : 0.5} />
         <SpotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={theme === '2084' ? 5 : 2} color={theme === '2084' ? "#06b6d4" : "#ffffff"} />
-        <PointLight position={[-10, -10, -10]} intensity={theme === '2084' ? 2 : 1} color={theme === '2084' ? "#0891b2" : "#C5A059"} />
+        <PointLight position={[-10, -10, -10]} intensity={theme === '2084' ? 2 : 1} color={theme === '2084' ? "#0891b2" : "#5E5CE6"} />
 
         <Float speed={1.2} rotationIntensity={0.5} floatIntensity={0.4}>
           <AmenCore position={[0, 0, 0]} color={theme === '2084' ? "#0e7490" : "#E0F2FE"} scale={2.2} />
@@ -104,7 +104,7 @@ export const IntelligenceWebScene: React.FC<{ theme?: 'classic' | '2084' }> = ({
     <div className={`w-full h-full absolute inset-0 transition-colors duration-1000 ${theme === '2084' ? 'bg-black' : 'bg-[#F5F4F0]'}`}>
       <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
         <AmbientLight intensity={theme === '2084' ? 0.3 : 0.8} />
-        <PointLight position={[5, 5, 5]} intensity={1.5} color={theme === '2084' ? "#06b6d4" : "#C5A059"} />
+        <PointLight position={[5, 5, 5]} intensity={1.5} color={theme === '2084' ? "#06b6d4" : "#5E5CE6"} />
         <Environment preset={theme === '2084' ? "night" : "studio"} />
 
         <Float rotationIntensity={0.2} floatIntensity={0.5} speed={2}>
@@ -112,7 +112,7 @@ export const IntelligenceWebScene: React.FC<{ theme?: 'classic' | '2084' }> = ({
           {[-1.5, 0, 1.5].map((x, i) => (
             <Mesh key={i} position={[x, Math.sin(x) * 0.5, 0]}>
               <SphereGeometry args={[0.08, 32, 32]} />
-              <MeshStandardMaterial color={theme === '2084' ? "#06b6d4" : "#C5A059"} metalness={1} roughness={0.1} />
+              <MeshStandardMaterial color={theme === '2084' ? "#06b6d4" : "#5E5CE6"} metalness={1} roughness={0.1} />
             </Mesh>
           ))}
 
