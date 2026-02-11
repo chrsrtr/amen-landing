@@ -5,8 +5,8 @@
 
 import React, { useState } from 'react';
 import { Upload, FileText, Brain, ArrowLeft, Sparkles, Terminal, Activity } from 'lucide-react';
-import { analyzeScientificPaper, PaperAnalysis } from '../services/geminiService';
-import { Visualizer4D } from './Visualizer4D';
+import { analyzeScientificPaper, PaperAnalysis } from '@/lib/geminiService';
+import { Visualizer4D } from '@/components/canvas/Visualizer4D';
 
 export const Sci4dView: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const [loading, setLoading] = useState(false);

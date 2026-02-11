@@ -5,11 +5,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HeroScene, IntelligenceWebScene } from './components/AmenScene';
-import { MetaDataDiagram, SpatialVisualizationDiagram, PartnerNetworkDiagram } from './components/Diagrams';
-import { FactCheckResearch } from './components/FactCheckResearch';
-import { Sci4dView } from './components/Sci4dView';
-import { SoulOrbit } from './components/SoulOrbit';
+import { HeroScene, IntelligenceWebScene } from '@/components/canvas/AmenScene';
+import { MetaDataDiagram, SpatialVisualizationDiagram, PartnerNetworkDiagram } from '@/components/ui/Diagrams';
+import { FactCheckResearch } from '@/components/ui/FactCheckResearch';
+import { Sci4dView } from '@/components/ui/Sci4dView';
+import { SoulOrbit } from '@/components/ui/SoulOrbit';
 import { ArrowDown, Menu, X, Globe, Layers, Eye, MapPin, Languages, Activity, Sparkles, ChevronDown, User } from 'lucide-react';
 
 const translations = {
